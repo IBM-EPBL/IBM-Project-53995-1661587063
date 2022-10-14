@@ -1,0 +1,542 @@
+{
+  "nbformat": 4,
+  "nbformat_minor": 0,
+  "metadata": {
+    "colab": {
+      "provenance": [],
+      "collapsed_sections": []
+    },
+    "kernelspec": {
+      "name": "python3",
+      "display_name": "Python 3.10.5 64-bit"
+    },
+    "language_info": {
+      "name": "python",
+      "version": "3.10.7",
+      "mimetype": "text/x-python",
+      "codemirror_mode": {
+        "name": "ipython",
+        "version": 3
+      },
+      "pygments_lexer": "ipython3",
+      "nbconvert_exporter": "python",
+      "file_extension": ".py"
+    },
+    "interpreter": {
+      "hash": "1a307d6bb843b499763ca417a3ba606392652b958f6de51d886dd63be25c1e6d"
+    }
+  },
+  "cells": [
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Basic Python"
+      ],
+      "metadata": {
+        "id": "McSxJAwcOdZ1"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 1. Split this string"
+      ],
+      "metadata": {
+        "id": "CU48hgo4Owz5"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "source": [
+        "s = \"Hi there Sam!\"\n",
+        "\n"
+      ],
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "['Hi', 'there', 'Sam!']"
+            ]
+          },
+          "metadata": {},
+          "execution_count": 4
+        }
+      ],
+      "metadata": {
+        "id": "s07c7JK7Oqt-",
+        "outputId": "b4a953e7-96ca-456a-af16-daa099d14e2e"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 1,
+      "source": [
+        "s= \"Hi there sam!\"\n",
+        "x=s.split(\" \")\n",
+        "print(x)\n"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "['Hi', 'there', 'sam!']\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "BTztbu4wod7o",
+        "outputId": "a1006a25-6c19-4c3c-d9f2-489b09271e56"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 2. Use .format() to print the following string. \n",
+        "\n",
+        "### Output should be: The diameter of Earth is 12742 kilometers."
+      ],
+      "metadata": {
+        "id": "GH1QBn8HP375"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "source": [
+        "planet = \"Earth\"\n",
+        "diameter = 12742"
+      ],
+      "outputs": [],
+      "metadata": {
+        "id": "_ZHoml3kPqic"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 3,
+      "source": [
+        "planet = \"Earth\"\n",
+        "diameter = 12742\n",
+        "print(\"The diameter of {} is {} kilometers.\".format(planet,diameter))\n"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "The diameter of Earth is 12742 kilometers.\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "id": "ZbzD0aVlod7q",
+        "outputId": "a7e69c77-e2f5-4653-caa1-153a1bd6eec9"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 3. In this nest dictionary grab the word \"hello\""
+      ],
+      "metadata": {
+        "id": "KE74ZEwkRExZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "source": [
+        "d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}"
+      ],
+      "outputs": [],
+      "metadata": {
+        "id": "fcVwbCc1QrQI"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 5,
+      "source": [
+        "d = {'k1':[1,2,3,{'tricky':['oh','man','inception',{'target':[1,2,3,'hello']}]}]}\n",
+        "d['k1'][3]['tricky'][3]['target'][3]"
+      ],
+      "outputs": [
+        {
+          "output_type": "execute_result",
+          "data": {
+            "text/plain": [
+              "'hello'"
+            ],
+            "application/vnd.google.colaboratory.intrinsic+json": {
+              "type": "string"
+            }
+          },
+          "metadata": {},
+          "execution_count": 5
+        }
+      ],
+      "metadata": {
+        "id": "MvbkMZpXYRaw",
+        "colab": {
+          "base_uri": "https://localhost:8080/",
+          "height": 36
+        },
+        "outputId": "847c91b5-d3ba-4398-be49-705040c8fc6a"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Numpy"
+      ],
+      "metadata": {
+        "id": "bw0vVp-9ddjv"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "source": [
+        "import numpy as np"
+      ],
+      "outputs": [],
+      "metadata": {
+        "id": "LLiE_TYrhA1O"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 4.1 Create an array of 10 zeros? \n",
+        "## 4.2 Create an array of 10 fives?"
+      ],
+      "metadata": {
+        "id": "wOg8hinbgx30"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 8,
+      "source": [
+        "import numpy as np\n",
+        "import numpy as np\n",
+        "print(array)"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[0. 0. 0. 0. 0. 0. 0. 0. 0. 0.]\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "id": "NHrirmgCYXvU",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "83fc3fee-2d2e-44c7-cf01-fb05084dcb75"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 11,
+      "source": [
+        "import numpy as np\n",
+        "array=np.ones(10)*5\n",
+        "print(array)\n",
+        "\n"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[5. 5. 5. 5. 5. 5. 5. 5. 5. 5.]\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "id": "e4005lsTYXxx",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "f73cc9fc-71a1-49d8-e81b-3c19d2be6df1"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 5. Create an array of all the even integers from 20 to 35"
+      ],
+      "metadata": {
+        "id": "gZHHDUBvrMX4"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 13,
+      "source": [
+        "import numpy as np\n",
+        "array=np.arange(20,36,2)\n",
+        "print(array)"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[20 22 24 26 28 30 32 34]\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "id": "oAI2tbU2Yag-",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "3f474890-e2e2-48a4-97ee-c24773b8b538"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 6. Create a 3x3 matrix with values ranging from 0 to 8"
+      ],
+      "metadata": {
+        "id": "NaOM308NsRpZ"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 14,
+      "source": [
+        "import numpy as np\n",
+        "x=np.arange(0,9).reshape(3,3)\n",
+        "print(x)\n"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[[0 1 2]\n",
+            " [3 4 5]\n",
+            " [6 7 8]]\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "id": "tOlEVH7BYceE",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "6a7eaa1b-fc7e-44ef-f82d-0df9d08c13eb"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 7. Concatenate a and b \n",
+        "## a = np.array([1, 2, 3]), b = np.array([4, 5, 6])"
+      ],
+      "metadata": {
+        "id": "hQ0dnhAQuU_p"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 19,
+      "source": [
+        "import numpy as np\n",
+        "a=np.array([1,2,3])\n",
+        "b=np.array([4,5,6])\n",
+        "arr=np.concatenate((a,b))\n",
+        "print(arr)"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "[1 2 3 4 5 6]\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "id": "rAPSw97aYfE0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "9964c92d-5b0a-4ceb-ff98-478f222c4c06"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "# Pandas"
+      ],
+      "metadata": {
+        "id": "dlPEY9DRwZga"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 8. Create a dataframe with 3 rows and 2 columns"
+      ],
+      "metadata": {
+        "id": "ijoYW51zwr87"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "source": [
+        "import pandas as pd\n"
+      ],
+      "outputs": [],
+      "metadata": {
+        "id": "T5OxJRZ8uvR7"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 21,
+      "source": [
+        "import pandas as pd\n",
+        "data=[10,20,30]\n",
+        "df=pd.DataFrame(data,columns=[\"Numbers\"])\n",
+        "print(df)"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   Numbers\n",
+            "0       10\n",
+            "1       20\n",
+            "2       30\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "id": "xNpI_XXoYhs0",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "8616d9b0-62ba-4a1f-9015-4597136fc874"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 9. Generate the series of dates from 1st Jan, 2023 to 10th Feb, 2023"
+      ],
+      "metadata": {
+        "id": "UXSmdNclyJQD"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 22,
+      "source": [
+        "import datetime\n",
+        "import pandas as pd\n",
+        "date=datetime.datetime.strptime(\"01-01-2023\",\"%d-%m-%Y\")\n",
+        "k=41\n",
+        "dateGen=pd.date_range(date,periods=k)\n",
+        "print(dateGen.strftime(\"%d-%m-%Y\"))"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "Index(['01-01-2023', '02-01-2023', '03-01-2023', '04-01-2023', '05-01-2023',\n",
+            "       '06-01-2023', '07-01-2023', '08-01-2023', '09-01-2023', '10-01-2023',\n",
+            "       '11-01-2023', '12-01-2023', '13-01-2023', '14-01-2023', '15-01-2023',\n",
+            "       '16-01-2023', '17-01-2023', '18-01-2023', '19-01-2023', '20-01-2023',\n",
+            "       '21-01-2023', '22-01-2023', '23-01-2023', '24-01-2023', '25-01-2023',\n",
+            "       '26-01-2023', '27-01-2023', '28-01-2023', '29-01-2023', '30-01-2023',\n",
+            "       '31-01-2023', '01-02-2023', '02-02-2023', '03-02-2023', '04-02-2023',\n",
+            "       '05-02-2023', '06-02-2023', '07-02-2023', '08-02-2023', '09-02-2023',\n",
+            "       '10-02-2023'],\n",
+            "      dtype='object')\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "id": "dgyC0JhVYl4F",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "48e748c0-c916-481b-c65b-ebff224b7884"
+      }
+    },
+    {
+      "cell_type": "markdown",
+      "source": [
+        "## 10. Create 2D list to DataFrame\n",
+        "\n",
+        "lists = [[1, 'aaa', 22],\n",
+        "         [2, 'bbb', 25],\n",
+        "         [3, 'ccc', 24]]"
+      ],
+      "metadata": {
+        "id": "ZizSetD-y5az"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": null,
+      "source": [
+        "lists = [[1, 'aaa', 22], [2, 'bbb', 25], [3, 'ccc', 24]]"
+      ],
+      "outputs": [],
+      "metadata": {
+        "id": "_XMC8aEt0llB"
+      }
+    },
+    {
+      "cell_type": "code",
+      "execution_count": 23,
+      "source": [
+        "import pandas as pd\n",
+        "data =[[1,'aaa',22],[2,'bbb',25],[3,'ccc',24]]\n",
+        "df=pd.DataFrame(data)\n",
+        "print(df)"
+      ],
+      "outputs": [
+        {
+          "output_type": "stream",
+          "name": "stdout",
+          "text": [
+            "   0    1   2\n",
+            "0  1  aaa  22\n",
+            "1  2  bbb  25\n",
+            "2  3  ccc  24\n"
+          ]
+        }
+      ],
+      "metadata": {
+        "id": "knH76sDKYsVX",
+        "colab": {
+          "base_uri": "https://localhost:8080/"
+        },
+        "outputId": "45d37811-b7e4-470d-fc26-6ac3a520444b"
+      }
+    }
+  ]
+}
